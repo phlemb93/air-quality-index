@@ -1,0 +1,106 @@
+* {
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, Tahoma, sans-serif;
+    margin: 0;
+}
+body {
+    background-color: rgb(77, 77, 77);
+}
+.header {
+    color: rgba(255, 255, 255, 0.966);
+    display: inline-block;
+    width: 100%;
+    height: 100px;  
+    margin: 0; 
+    position: sticky;
+    top: 0;
+}
+
+.header .leagues {
+    background-color: #3F0F52;
+    padding: 20px;
+    display: flex;
+    justify-content: space-around;
+    width: 100%;
+    height: 50px;
+}
+
+.header .nav {
+    background-color: #3F0F52;
+    display: flex;
+    justify-content: space-around;
+    text-transform: uppercase;
+    font-size: 10px;
+    width: 100%;
+    height: 50px;
+    padding-top: 30px;
+}
+.matches-container {
+    background-color: rgba(0, 0, 0, 0.425);
+    border-radius: 5px;
+    color: rgba(255, 255, 255, 0.966);
+    width: 92%;
+    height: 1000px;
+    margin: auto;
+    padding-top: 10px;
+}
+.matches-container .title {
+    padding: 10px;
+    font-size: 12px;
+}
+.matches-container .matches {
+    display: grid;
+    grid-template-columns: auto auto;
+    font-size: 12px;
+}
+.matches .match{
+    width: 95%;
+    height: 120px;
+    padding: 0 10px;
+    border: 1px solid gray;
+    border-radius: 8px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 5px;
+ }
+.match .teams {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 0 10px;
+    width: 100%;
+    height: 100%;
+}
+.teams .team div:nth-child(odd), .team-score div:nth-child(odd) {
+    margin-bottom: 10px;
+}
+.match .details {
+    border-left: 1px solid gray;
+    height: 70px;
+    padding: 10px 0 0 10px;
+    width: 100px;
+    text-align: center;
+}
+.details .date div:nth-child(even) {
+    color: rgb(184, 184, 184);
+    font-size: 10px;
+}
+
+
+@media (max-width: 520px) {
+
+    .matches .match{
+        width: 90%;
+        margin: 5px auto;
+     }
+    .matches-container .matches {
+        display: grid;
+        grid-template-columns: auto;
+    }
+
+    .details .date div:nth-child(even) {
+        font-size: 11px;
+    }
+
+}
