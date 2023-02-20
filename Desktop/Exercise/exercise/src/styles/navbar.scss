@@ -1,0 +1,50 @@
+
+.navbar {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    height: 60px;
+
+    .left{
+        flex: 1;
+    }
+    .right{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-right: 20px;
+        flex: 1;
+
+        .contents {
+            display: flex;
+            justify-content: space-evenly;
+            height: 100%;
+            flex: 2;
+
+            .content{
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                position: relative;
+
+                .contentImg {
+                    z-index: -1;
+                }
+                h3{
+                    position: absolute;
+                    top: 0%;
+                    z-index: 10;
+
+                    &:hover {
+                        transform: scale(1.25, 1.25);
+                        border-bottom: 2px solid $secondary-color;
+                        transition: all 0.5s ease-in-out;
+                    }
+                }
+            }
+        }
+
+        // .cart {
+        // }
+    }
+}

@@ -1,0 +1,19 @@
+@import url('https://fonts.googleapis.com/css2?family=Inconsolata:wght@200;300;400;500;600;700;800;900&family=Josefin+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+.card {
+    @apply relative border-4 mb-4 w-1/2 overflow-hidden flex flex-col rounded-xl mx-auto justify-center items-center drop-shadow-md hover:drop-shadow-l md:w-3/5 lg:w-2/3;
+}
+.card-text {
+    @apply flex flex-col justify-start w-full ml-8 mt-2;
+}
+.btn {
+    @apply border-2 rounded-lg px-4 py-1 my-2 text-gray-600 cursor-pointer hover:text-white;
+}
+.badge {
+    @apply absolute top-2 left-2 w-10 px-2 text-sm rounded-full font-bold text-white;
+}
