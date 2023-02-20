@@ -3,7 +3,7 @@ import { countContext } from '../App';
 
 function Home() {
 
-  const { increment, decrement, count } = useContext(countContext);
+  const { dispatch, count } = useContext(countContext);
 
   return (
     <div className="counter">
@@ -15,10 +15,10 @@ function Home() {
 
     <div>
       <div>
-          <h2 onClick={() => increment()}>+</h2>
+          <h2 onClick={() => dispatch({type: 'increment', payload: 2})}>+</h2>
         </div>
         <div>
-          <h2 onClick={() => decrement()}>-</h2>
+          <h2 onClick={() => dispatch({type: 'decrement'})}>-</h2>
         </div>
     </div>
       

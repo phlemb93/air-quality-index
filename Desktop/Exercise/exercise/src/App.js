@@ -1,23 +1,31 @@
-import React, { useState, createContext } from 'react'
+import React, { useReducer, createContext } from 'react'
 import Navbar from './components/Navbar';
 import Home from './components/Home';
 
 
 export const countContext = createContext();
 
+const initialState = 0;
+
+const reducer = (state = initialState, action) => {
+  switch(action.type){
+    case 'increment':
+      return state + action.payload;
+
+    case 'decrement':
+      return state - 1;
+
+    default:
+      return state;
+  }
+}
+
 function App() {
 
-const [count, setCount] = useState(4);
-
-const increment = () => {
-  setCount( prevCount => prevCount + 10);
-}
-const decrement = () => {
-  setCount( prevCount => prevCount - 10);
-}
+  const [count, dispatch] = useReducer(reducer, initialState);
 
   return (
-    <countContext.Provider value={{count, increment, decrement}}>
+    <countContext.Provider value={{count, dispatch}}>
       <div className="App">
         <header className="header">
           <Navbar />
