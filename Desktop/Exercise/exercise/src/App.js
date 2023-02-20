@@ -1,19 +1,33 @@
-import React, { useReducer, createContext } from 'react'
+import React, { useReducer, useEffect, createContext } from 'react'
 import Navbar from './components/Navbar';
 import Home from './components/Home';
+import axios from 'axios';
 
 
-export const countContext = createContext();
 
-const initialState = 0;
+export const postsContext = createContext();
+
+const initialState = {
+  loading: true,
+  data: [],
+  error: ''
+};
 
 const reducer = (state = initialState, action) => {
   switch(action.type){
-    case 'increment':
-      return state + action.payload;
+    case 'success':
+      return {
+        loading: false,
+        data: action.payload,
+        error: ''
+      };
 
-    case 'decrement':
-      return state - 1;
+    case 'failed':
+      return {
+        loading: false,
+        data: [],
+        error: action.payload
+      };
 
     default:
       return state;
@@ -21,11 +35,16 @@ const reducer = (state = initialState, action) => {
 }
 
 function App() {
+  const [posts, dispatch] = useReducer(reducer, initialState);
 
-  const [count, dispatch] = useReducer(reducer, initialState);
+  useEffect(() => {
+    axios.get('https://jsonplaceholder.typicode.com/posts')
+    .then(res => dispatch(res.data))
+    .catch(err => dispatch(err.message))
+  }, [])
 
   return (
-    <countContext.Provider value={{count, dispatch}}>
+    <postsContext.Provider value={{posts, dispatch}}>
       <div className="App">
         <header className="header">
           <Navbar />
@@ -34,7 +53,7 @@ function App() {
           <Home />
         </main>
       </div>
-    </countContext.Provider>
+    </postsContext.Provider>
   );
 }
 

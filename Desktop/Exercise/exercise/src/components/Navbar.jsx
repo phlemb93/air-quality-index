@@ -7,7 +7,7 @@ import { countContext } from '../App';
 
 function Navbar() {
 
-  const { count } = useContext(countContext);
+//   const { count } = useContext(countContext);
 
   return (
     <div className="navbar">
@@ -26,7 +26,7 @@ function Navbar() {
             </div>
 
             <div className="cart">
-            <Badge badgeContent={count} color="primary">
+            <Badge badgeContent={4} color="primary">
                 <ShoppingCartIcon />
             </Badge>
 
