@@ -1,0 +1,179 @@
+.App {
+  height: auto;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  font-family: Calibri, 'Gill Sans', 'Gill Sans MT', 'Trebuchet MS', sans-serif;
+
+
+  .form {
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    flex-direction: column;
+    max-width: 80%;
+    width: 950px;
+    margin-bottom: 10vh;
+
+    h2 {
+      font-weight: 600;
+    }
+
+    form, .details, .activities, .other-activities {
+      display: flex;
+      justify-content: start;
+      align-items: center;
+      flex-direction: column;
+      width: 100%;
+
+      p {
+        font-size: 18px;
+      }
+
+      label {
+        width: 90%;
+        padding: 10px;
+      }
+      input, textarea {
+        width: 90%;
+        padding: 16px 10px;
+        margin-bottom: 20px;
+
+        &:focus {
+          outline-color: rgb(0, 122, 183);
+        }
+      }
+
+      textarea {
+        height: 150px;
+      }
+
+      .other-activities {
+
+        label {
+          text-align: center;
+          font-size: 18px;
+          margin-bottom: 10px;
+        }
+      }
+    }
+
+    button {
+      padding: 14px;
+      width: 200px;
+      cursor: pointer;
+      background-color: rgb(0, 147, 220);
+      color: white;
+      border: none;
+      border-radius: 5px;
+      margin: 20px 0;
+  
+  
+      &:hover {
+  
+        background-color: rgb(0, 122, 183);
+        transform: translateY(2px);
+        transition: all 0.5s ease-in-out;
+      }
+    }
+  }
+
+
+
+
+
+  .template {
+    max-width: 80%;
+    width: 950px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin: 5vh auto 10vh;
+
+    h2 {
+      text-align: center;
+      font-weight: 600;
+    }
+
+    table {
+      width: 100%;
+    }
+
+    table, th, td {
+      border: 1px solid black;
+      border-collapse: collapse;
+      padding: 16px 10px;
+      text-align: left;
+
+    }
+
+
+    .company {
+      text-transform: uppercase;
+      font-size: 20px;
+      display: flex;
+      margin-top: 20px;
+      border: none;
+    }
+
+    .heading th {
+      font-weight: normal;
+    }
+
+    .list {
+      font-size: 16px;
+
+      span {
+        margin: 0 10px;
+      }
+    }
+
+    .btns {
+      width: 100%;
+      display: flex;
+      justify-content: space-between;
+
+      button {
+        padding: 14px;
+        width: 150px;
+        cursor: pointer;
+        border-radius: 5px;
+        margin: 20px 0;
+
+        &:first-child {
+          background-color: white;
+          border: 2px solid rgb(0, 147, 220);
+          color: black;
+
+          &:hover {
+    
+            // background-color: rgb(0, 122, 183);
+            transform: translateY(2px);
+            transition: all 0.5s ease-in-out;
+          }
+        }
+
+        &:last-child {
+          background-color: rgb(0, 147, 220);
+          color: white;
+          border: none;
+
+          &:hover {
+    
+            background-color: rgb(0, 122, 183);
+            transform: translateY(2px);
+            transition: all 0.5s ease-in-out;
+          }
+        }
+
+    
+    
+        
+      }
+    }
+  }
+ 
+
+
+}
