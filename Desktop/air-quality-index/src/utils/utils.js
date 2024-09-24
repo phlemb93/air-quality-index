@@ -38,11 +38,11 @@ if(aqi < 4){
 {/*  SO2 - Sulfur Dioxide */}
 export const so2Condition = (value => {
     if(value <= 266){
-        return <h3>Good</h3>
+        return <h4>Low</h4>
     } else if(value >= 533){
-        return <h3>Unhealthy</h3>
+        return <h4>High</h4>
     } else {
-        return <h3>Moderate</h3>
+        return <h4>Moderate</h4>
     }
  })
 export const so2Color = (value => {
@@ -56,22 +56,22 @@ export const so2Color = (value => {
  })
 export const so2BorderColor = (value => {
     if(value <= 266){
-        return { border: "6px solid #34A752" }
+        return { border: "3px solid #34A752" }
     } else if(value >= 533){
-        return { border: "6px solid #FF5F53"}
+        return { border: "3px solid #FF5F53"}
     } else {
-        return { border: "6px solid #E0BA4A"}
+        return { border: "3px solid #E0BA4A"}
     }
  })
 
  {/*  NO2 - Nitrogen Dioxide*/}
 export const no2Condition = (value => {
     if(value <= 200){
-        return <h3>Good</h3>
+        return <h4>Low</h4>
     } else if(value >= 401){
-        return <h3>Unhealthy</h3>
+        return <h4>High</h4>
     } else {
-        return <h3>Moderate</h3>
+        return <h4>Moderate</h4>
     }
  })
 export const no2Color = (value => {
@@ -85,22 +85,22 @@ export const no2Color = (value => {
  })
 export const no2BorderColor = (value => {
     if(value <= 200){
-        return { border: "6px solid #34A752" }
+        return { border: "3px solid #34A752" }
     } else if(value >= 401){
-        return { border: "6px solid #FF5F53"}
+        return { border: "3px solid #FF5F53"}
     } else {
-        return { border: "6px solid #E0BA4A"}
+        return { border: "3px solid #E0BA4A"}
     }
  })
 
 {/*  PM2_5 */}
 export const pm2_5Condition = (value => {
     if(value <= 35){
-        return <h3>Good</h3>
+        return <h4>Low</h4>
     } else if(value >= 54){
-        return <h3>Unhealthy</h3>
+        return <h4>High</h4>
     } else {
-        return <h3>Moderate</h3>
+        return <h4>Moderate</h4>
     }
  })
 export const pm2_5Color = (value => {
@@ -114,11 +114,11 @@ export const pm2_5Color = (value => {
  })
 export const pm2_5BorderColor = (value => {
     if(value <= 35){
-        return { border: "6px solid #34A752" }
+        return { border: "3px solid #34A752" }
     } else if(value >= 54){
-        return { border: "6px solid #FF5F53"}
+        return { border: "3px solid #FF5F53"}
     } else {
-        return { border: "6px solid #E0BA4A"}
+        return { border: "3px solid #E0BA4A"}
     }
  })
 
@@ -126,11 +126,11 @@ export const pm2_5BorderColor = (value => {
 {/*  PM10 */}
 export const pm10Condition = (value => {
     if(value <= 50){
-        return <h3>Good</h3>
+        return <h4>Low</h4>
     } else if(value >= 76){
-        return <h3>Unhealthy</h3>
+        return <h4>High</h4>
     } else {
-        return <h3>Moderate</h3>
+        return <h4>Moderate</h4>
     }
  })
 export const pm10Color = (value => {
@@ -144,22 +144,22 @@ export const pm10Color = (value => {
  })
 export const pm10BorderColor = (value => {
     if(value <= 50){
-        return { border: "6px solid #34A752" }
+        return { border: "3px solid #34A752" }
     } else if(value >= 76){
-        return { border: "6px solid #FF5F53"}
+        return { border: "3px solid #FF5F53"}
     } else {
-        return { border: "6px solid #E0BA4A"}
+        return { border: "3px solid #E0BA4A"}
     }
  })
 
  {/*  O3 - Ozone */}
 export const o3Condition = (value => {
     if(value <= 100){
-        return <h3>Good</h3>
+        return <h4>Low</h4>
     } else if(value >= 161){
-        return <h3>Unhealthy</h3>
+        return <h4>High</h4>
     } else {
-        return <h3>Moderate</h3>
+        return <h4>Moderate</h4>
     }
  })
 export const o3Color = (value => {
@@ -173,10 +173,10 @@ export const o3Color = (value => {
  })
 export const o3BorderColor = (value => {
     if(value <= 200){
-        return { border: "6px solid #34A752" }
+        return { border: "3px solid #34A752" }
     } else if(value >= 401){
-        return { border: "6px solid #FF5F53"}
+        return { border: "3px solid #FF5F53"}
     } else {
-        return { border: "6px solid #E0BA4A"}
+        return { border: "3px solid #E0BA4A"}
     }
  })

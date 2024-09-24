@@ -43,12 +43,12 @@ const Home = () => {
                     <Pollutants data={data} />
                     {/* <ReactQueryDevtools initialIsOpen={false} /> */}
                 </> :
-                <div>
+                <div style={{padding: '20px'}}>
                     { handleError(error) }
                 </div>
             }
         </> :
-        <div>
+        <div style={{width: '500px', padding: '20px'}}>
             <h1>Loading...</h1>
         </div>
         
